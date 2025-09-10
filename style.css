@@ -1,0 +1,107 @@
+/* Umum */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background: #d9f2ff;
+}
+
+/* Header */
+header {
+  background: #d9f2ff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(63, 72, 75);
+}
+
+/* Layout utama */
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  padding: 10px;
+  background: #d9f2ff;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px;
+  margin: 10px 0;
+  text-align: center;
+  border: 1px solid #141313;
+  text-decoration: none;
+  color: rgb(63, 72, 75);
+}
+
+/* Konten */
+.content {
+  width: 80%;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  flex: 1 1 45%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.box p {
+  text-align: justify;
+  font-size: 14px;
+}
+
+/* -------------------------- */
+/* RESPONSIVE (untuk HP) */
+/* -------------------------- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* susun vertikal */
+  }
+
+  .sidebar {
+    width: 100%; /* sidebar penuh */
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sidebar a {
+    flex: 1;
+    margin: 5px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .box {
+    flex: 1 1 100%; /* konten penuh */
+    }
